@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=http://example.com">
+  <title>Tela de Bloqueio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="lock-screen">
+  <div class="lock-center">
+    <div class="lock-time">08:45</div>
+    <div class="lock-date">terça-feira, 11 de junho</div>
+  </div>
+</body>
+</html>
+
+<style>
+    .lock-screen {
+  background-image: url('images/windows11-wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.lock-center {
+  text-align: center;
+}
+
+.lock-time {
+  font-size: 6rem;
+  font-weight: 300;
+}
+
+.lock-date {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.lock-icons {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  font-size: 1.2rem;
+  display: flex;
+  gap: 20px;
+  opacity: 0.9;
+}
+
+</style>
+</body>
+</html>

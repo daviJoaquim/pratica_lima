@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=http://example.com">
+    <title>Boot screen</title>
+</head>
+<body>
+    <style>
+        body {
+          margin: 0;
+          background-color: black;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          flex-direction: column;
+          font-family: Arial, sans-serif;
+        }
+        
+        .logo {
+          font-size: 2em;
+          margin-bottom: 10px;
+        }
+    
+        .loader {
+          width: 30px;
+          height: 30px;
+          border: 5px solid white;
+          border-top-color: transparent;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+
+      
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <img src="images/windows-11.png" width="200" height="200">
+      <div class="loader"></div>
+    </body>
+    </html>
