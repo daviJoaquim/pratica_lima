@@ -1,96 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Desktop</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden; /* remove rolagens */
+      font-family: Arial, sans-serif;
+    }
+     .body{
+       background-color: rgb(255, 255, 255);
+       animation: 500ms fadeIn;
+    }
+    @keyframes fadeIn {
+       from{
+         opacity: 0;
+       }
+       to{
+         opacity: 1;
+       }
+    }
+    body {
+      background-image: url('images/windows11-alt1-wallpaper.webp');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+
+    .atalhos {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .atalho {
+      text-align: center;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .atalho img {
+      width: 50px;
+    }
+
+    .barra-tarefas {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      color: white;
+    }
+
+    .clima img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .inicio img {
+      margin: 0 5px;
+    }
+
+    .relogio {
+      text-align: right;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .data {
+      font-size: 12px;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-    <style>
-        body {
-          margin: 0;
-          padding: 0;
-          font-family: Arial, sans-serif;
-          background-image: url('https://tm.ibxk.com.br/2021/06/16/16091644736049.jpg');
-          background-size: cover;
-          background-position: center;
-          height: 100vh;
-          position: relative;
-        }
-    
-        /* Ícones da área de trabalho */
-        .atalhos {
-          position: absolute;
-          top: 20px;
-          left: 20px;
-        }
-    
-        .atalho {
-          text-align: center;
-          margin-bottom: 30px;
-          color: white;
-        }
-    
-        .atalho img {
-          width: 50px;
-        }
-    
-        .barra-tarefas {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          height: 50px;
-          background-color: rgba(0, 0, 0, 0.6);
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 20px;
-          color: white;
-        }
-    
-        .inicio {
-          font-size: 20px;
-        }
-    
-        .relogio {
-          font-size: 14px;
-        }
-
-        .barra-tarefas {
-            justify-content: center;
-        }
-      </style>
-    </head>
-    <body>
-    
-      <div class="atalhos">
-        <div class="atalho">
-          <img src="https://img.icons8.com/fluency/48/folder-invoices.png" alt="Arquivos">
-          <div>Meus Arquivos</div>
-        </div>
-        <div class="atalho">
-          <img src="https://img.icons8.com/fluency/48/recycle-bin.png" alt="Lixeira">
-          <div>Lixeira</div>
-        </div>
-      </div>
-    
-      <div class="barra-tarefas">
-        <div class="inicio">🪟</div>
-        <div class="relogio" id="hora">00:00</div>
+  <div class="atalhos">
+    <div class="atalho">
+      <img src="https://img.icons8.com/fluency/48/folder-invoices.png" alt="Arquivos">
+      <div>Meus Arquivos</div>
     </div>
-    
-    
-      <script>
-        function atualizarHora() {
-          const agora = new Date();
-          const horas = agora.getHours().toString().padStart(2, '0');
-          const minutos = agora.getMinutes().toString().padStart(2, '0');
-          document.getElementById('hora').textContent = `${horas}:${minutos}`;
-        }
-        atualizarHora();
-        setInterval(atualizarHora, 1000);
-      </script>
-    
-    </body>
-    </html>
+    <div class="atalho">
+      <img src="https://img.icons8.com/fluency/48/recycle-bin.png" alt="Lixeira">
+      <div>Lixeira</div>
+    </div>
+    <div class="atalho">
+      <img src="images/forti.png" alt="Fortnite">
+    </div>
+  </div>
+
+  <div class="barra-tarefas">
+    <div class="clima">
+      <img src="images/clima.png" alt="Clima">
+    </div>
+
+  
+    <div class="inicio">
+      <img src="images/windows-11.png" width="25" height="25">
+      <img src="images/simbolo.png" width="25" height="25">
+      <img src="images/vs.png" width="25" height="25">
+      <img src="images/Firefox_logo,_2019.png" width="25" height="25">
+      <img src="images/Microsoft_Edge_logo_(2019).png" width="25" height="25">
+      <img src="images/Microsoft_Store_Fluent_Design_icon_(2).png" width="25" height="25">
+      <img src="images/download.png" width="25" height="25">
+    </div>
+
+   
+    <div class="relogio">
+      <div id="hora">00:00</div>
+      <div class="data" id="data">00/00/0000</div>
+    </div>
+  </div>
+
+  <script>
+    function atualizarHoraData() {
+      const agora = new Date();
+
+      const horas = agora.getHours().toString().padStart(2, '0');
+      const minutos = agora.getMinutes().toString().padStart(2, '0');
+      document.getElementById('hora').textContent = `${horas}:${minutos}`;
+
+      const dia = agora.getDate().toString().padStart(2, '0');
+      const mes = (agora.getMonth() + 1).toString().padStart(2, '0');
+      const ano = agora.getFullYear();
+      document.getElementById('data').textContent = `${dia}/${mes}/${ano}`;
+    }
+
+    atualizarHoraData();
+    setInterval(atualizarHoraData, 1000);
+  </script>
+
+  
+</body>
+</html>
